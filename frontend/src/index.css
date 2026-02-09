@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Default Theme = FitForge */
+:root {
+  --bg: #0b0f14;
+  --card: #111827;
+  --primary: #22c55e;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --error: #ef4444;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+/* 2) RepSync */
+[data-theme="repsync"] {
+  --bg: #0f172a;
+  --card: #111827;
+  --primary: #38bdf8;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --error: #ef4444;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+/* 3) IronTrack */
+[data-theme="irontrack"] {
+  --bg: #111827;
+  --card: #1f2937;
+  --primary: #f97316;
+  --text: #ffffff;
+  --muted: #d1d5db;
+  --error: #ef4444;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+/* 4) PulseFit */
+[data-theme="pulsefit"] {
+  --bg: #ffffff;
+  --card: #f9fafb;
+  --primary: #2563eb;
+  --text: #111827;
+  --muted: #6b7280;
+  --error: #dc2626;
+  --border: rgba(17, 24, 39, 0.12);
+}
+
+/* 5) CoreLog */
+[data-theme="corelog"] {
+  --bg: #f9fafb;
+  --card: #ffffff;
+  --primary: #14b8a6;
+  --text: #0f172a;
+  --muted: #475569;
+  --error: #ef4444;
+  --border: rgba(15, 23, 42, 0.12);
+}
+
+/* 6) GymGenius */
+[data-theme="gymgenius"] {
+  --bg: #4c1d95;
+  --card: #2e1065;
+  --primary: #ec4899;
+  --text: #fdf2f8;
+  --muted: #f9a8d4;
+  --error: #f43f5e;
+  --border: rgba(255, 255, 255, 0.12);
+}
+
+/* 7) SweatMate */
+[data-theme="sweatmate"] {
+  --bg: #111827;
+  --card: #1f2937;
+  --primary: #ef4444;
+  --text: #f3f4f6;
+  --muted: #9ca3af;
+  --error: #f97316;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+/* 8) BeastMode */
+[data-theme="beastmode"] {
+  --bg: #000000;
+  --card: #111827;
+  --primary: #dc2626;
+  --text: #ffffff;
+  --muted: #9ca3af;
+  --error: #ef4444;
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+/* 9) TitanTracker */
+[data-theme="titantracker"] {
+  --bg: #1f2937;
+  --card: #111827;
+  --primary: #fbbf24;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --error: #ef4444;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+.theme-select {
+  background-color: transparent;
+  color: var(--text);
+  border: none;
+  padding: 6px 6px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+
+.theme-select option {
+  background-color: var(--card);
+  color: var(--text);
+}
+.theme-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+}
+* {
+  transition: background-color 0.25s ease, color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+body {
+  background-color: var(--bg);
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+}
+
+header {
+  background-color: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+header .container {
+  max-width: 1400px;
+  height: 10vh;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+header a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.pages {
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+}
+.workout-details {
+  background-color: var(--card);
+  border-radius: 14px;
+  margin: 16px auto;
+  padding: 16px 18px;
+  position: relative;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border);
+}
+.workout-details p strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+.workout-details h4 {
+  margin: 0px 0px 10px 0px;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.workout-details p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.workout-details span {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 8px;
+  border-radius: 50%;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.workout-details span:hover {
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  color: var(--error);
+}
+.workout-details:hover {
+  transform: translateY(-2px);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.55);
+}
+
+
+
+label,
+input {
+  display: block;
+}
+
+label {
+  color: var(--text);
+}
+
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  outline: none;
+}
+
+input:focus {
+  border: 1px solid var(--primary);
+}
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #0b0f14;
+  padding: 12px;
+  font-family: "Poppins";
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  width: 100%;
+  font-size: 1rem;
+}
+
+form button:hover {
+  box-shadow: 0px 0px 15px rgba(34, 197, 94, 0.35);
+  transform: translateY(-1px);
+}
+
+div.error {
+  padding: 10px;
+  background-color: rgba(239, 68, 68, 0.08);
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 6px;
+  margin: 20px 0px;
+}
+
+input.error {
+  border: 2px solid var(--error);
+}
+
+
+.user-email {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.user-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+nav a {
+  margin-left: 10px;
+  color: var(--text);
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+nav button {
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+nav button:hover {
+  background-color: var(--primary);
+  color: #0b0f14;
+}
+
+form.signup,
+form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  background-color: var(--card);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.4);
+}
+form.create {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.35);
+}
+
+.empty-state {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed var(--border);
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.empty-state h3 {
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+@media (max-width: 900px) {
+  .home {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
