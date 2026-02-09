@@ -1,8 +1,15 @@
+
+# 🚀 Live Links
+
+# Frontend (Netlify): https://fitforgeworkouttracker.netlify.app
+# Backend API (Render): https://fitforge-workouttracker-backend.onrender.com
+
 # 🏋️ FitForge – Workout Tracker (MERN Stack)
 
 FitForge is a full-stack MERN Workout Tracker application where users can signup/login and manage their personal workouts securely.
 
 Each user has their own workouts stored in MongoDB, protected using JWT Authentication.
+
 
 ---
 
